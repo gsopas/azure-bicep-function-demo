@@ -1,0 +1,7 @@
+rg="rg-bicep-demo"
+region="australiaeast"
+az group create -n $rg -l $region
+
+az deployment group create \
+  --resource-group $rg \
+  --template-file main.bicep
